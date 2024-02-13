@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700,800" rel="stylesheet">
+
+    <!-- BootStrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap" rel="stylesheet">
+
+
+    <!-- jQuery  -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        @font-face {
+            font-family: 'Samarkan';
+            /* Specify the font family name */
+            src: url('assets/SAMARN__.woff') format('woff'),
+                /* Path to the font file */
+                url('assets/SAMARO__.woff') format('woff');
+            /* Specify different formats for compatibility */
+        }
+
+        body,
+        html {
+            background-color: #ebf1ed;
+            height: 100%;
+            /* margin: 0; */
+        }
+
+        h1 {
+            font-family: Georgia;
+            font-weight: bold;
+            font-style: italic;
+            margin: 10px;
+            text-shadow: 2px 2px #000;
+        }
+
+        p {
+            font-family: Georgia;
+            font-style: italic;
+            text-shadow: 1px 1px #000;
+        }
+
+        .exclusions {
+            font-family: Georgia;
+            font-size: 8pt;
+            letter-spacing: 1px;
+            text-shadow: none;
+            font-style: normal;
+        }
+
+        .hero-image {
+            background-image: url("assets/1.PNG");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .hero-text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+
+
+        .hero-text button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 12px 35px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            border: 5px solid black;
+            margin-left: -1px;
+            margin-top: 5%;
+            font-size: 8pt;
+            letter-spacing: 5px;
+            font-weight: bold;
+            font-family: Geogia;
+            font-syle: italic;
+        }
+
+        .hero-text button:hover {
+            background-color: transparent;
+            color: white;
+            border: 5px solid black;
+            text-shadow: 2px 2px #000;
+        }
+
+        /* unvisited link */
+        a:link {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* visited link */
+        a:visited {
+            color: #fff;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        /* selected link */
+        a:active {
+            color: #fff;
+        }
+
+        video {
+            width: 100%;
+        }
+
+        .landscape-img {
+            /* margin-top: 5%; */
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+            object-fit: contain;
+            /* Adjust object-fit property */
+            object-position: center;
+        }
+
+        .background-container {
+            background-image: url('assets/wed_det.png');
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Adjust the opacity value as needed */
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .wedding-title,
+        .wedding-container {
+            margin-top: 15px;
+            height: 12rem;
+            font-family: 'Samarkan', sans-serif;
+            /* font-family: 'Calligraffitti', cursive; */
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.3rem;
+            font-weight: bolder;
+        }
+
+        .weds-container {
+            margin-top: 42px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .wedding-text {
+            color: crimson;
+        }
+
+        .wedding-weds {
+            margin-right: 20px;
+            margin-left: 20px;
+            color: rgb(214, 213, 186);
+
+        }
+
+        .wedding-img {
+            margin-top: -15px;
+            max-width: 125px;
+            height: auto;
+        }
+
+        .wedding-container {
+            font-family: 'Calligraffitti', cursive;
+            color: #d5acba;
+
+        }
+
+        .left-content,
+        .right-content {
+            flex-basis: 45%;
+            /* Adjust the width as needed */
+            display: flex;
+            align-items: center;
+        }
+
+        .left-content {
+            justify-content: flex-start;
+        }
+
+        .right-content {
+            justify-content: flex-end;
+        }
+
+        .left-text,
+        .right-text {
+            font-size: 2.1rem;
+
+        }
+
+        .left-img,
+        .right-img {
+            width: 90%;
+            height: auto;
+        }
+
+        h1 {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            font-family: "Raleway", sans-serif;
+            font-weight: 300;
+            font-size: 40px;
+            color: #080808;
+            -webkit-transition: all 0.4s ease 0s;
+            -o-transition: all 0.4s ease 0s;
+            transition: all 0.4s ease 0s;
+        }
+
+        h1 span {
+            display: block;
+            font-size: 0.5em;
+            line-height: 1.3;
+        }
+
+        h1 em {
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .eleven h1 {
+            font-size: 30px;
+            text-align: center;
+            line-height: 1.5em;
+            padding-bottom: 45px;
+            font-family: "Playfair Display", serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #111;
+        }
+
+
+        .eleven h1:before {
+            position: absolute;
+            left: 0;
+            bottom: 20px;
+            width: 60%;
+            left: 50%;
+            margin-left: -30%;
+            height: 1px;
+            content: "";
+            background-color: #777;
+            z-index: 4;
+        }
+
+        .eleven h1:after {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            left: 50%;
+            margin-left: -20px;
+            bottom: 0px;
+            content: '\00a7';
+            font-size: 30px;
+            line-height: 40px;
+            color: #c50000;
+            font-weight: 400;
+            z-index: 5;
+            display: block;
+            background-color: #f8f8f8;
+        }
+
+        .events {
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .event {
+            width: 300px;
+            margin-top: 20px;
+            margin-bottom: 50px;
+
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        .event img {
+            width: 100%;
+            height: auto;
+        }
+
+
+        .event .frame {
+            border: 10px solid #6f4724;
+            /* Adjust border width and color as needed */
+            display: inline-block;
+        }
+
+        .event .frame img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .event-details {
+            padding: 10px;
+            background-image: url('assets/det_bg_2.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+
+        .event-details h2 {
+            font-family: 'Samarkan';
+            color: crimson;
+            margin-top: 0;
+            font-size: 3rem;
+        }
+
+        .event-details p {
+            margin: 5px 0;
+        }
+
+        .location{
+            border: 2px solid gold;
+            width: auto;
+            text-align: center;
+            background-color: transparent;
+        }
+        .loc{
+            color: #000;
+        }
+
+        .location:hover{
+            background-color: gold;
+            /* background-color: #fff; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <!-- <div class="hero-image" style="height: 100%;">
+        <div class="hero-text">
+            <h1 style="font-style: Georgia; color: #fff; font-size:50px;">Welcome</h1>
+
+            <button onclick="$('.hero-image').hide();">EXPLORE</button>
+        </div>
+    </div> -->
+
+    <!-- Video -->
+    <video id="myVideo" muted autoplay controls>
+        <source src="assets/L.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Wedding Card -->
+    <img src="assets/bg_2.gif" alt="Landscape Image" class="landscape-img">
+
+    <!-- Carousel -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/2.PNG" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/3.PNG" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/12.PNG" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/10.PNG" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Bride And Groom -->
+    <div class="background-container">
+        <div class="wedding-title">
+            <span class="wedding-text">Ganesh</span>
+            <div class="weds-container">
+                <span class="wedding-weds">Weds</span>
+                <img class="wedding-img" src="assets/roses.png" alt="">
+            </div>
+            <span class="wedding-text">Nitya</span>
+        </div>
+
+        <div class="wedding-container">
+            <div class="left-content">
+                <span class="left-text">Mr <span style="margin: 2px;"></span> Ganesh</span>
+            </div>
+            <div class="right-content">
+                <img class="right-img" src="assets/12.png" alt="">
+            </div>
+        </div>
+
+        <div class="wedding-container">
+            <div class="left-content">
+                <img class="left-img" src="assets/10.png" alt="">
+            </div>
+            <div class="right-content">
+                <span class="right-text">Ms <span style="margin: 2px;"></span> Nitya</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Functions -->
+    <div class="events">
+        <div class="eleven">
+            <h1>Functions</h1>
+        </div>
+
+        <div class="event">
+            <div class="frame">
+                <img src="assets/mehndi.jpg" alt="Event 1">
+            </div>
+            <div class="event-details">
+                <h2>Mehndi</h2>
+                <p>DD/MM/YYYY</p>
+                <p>HH:MM AM/PM</p>
+                <p>Venue Name</p>
+                <button class="location"><a href="https://maps.app.goo.gl/venue-location" target="_blank"><span class="loc">View Map</span></a></button>
+                
+            </div>
+        </div>
+        <div class="event">
+            <div class="frame">
+                <img src="assets/haldi.jpg" alt="Event 1">
+            </div>
+            <div class="event-details">
+                <h2>Haldi</h2>
+                <p>DD/MM/YYYY</p>
+                <p>HH:MM AM/PM</p>
+                <p>Venue Name</p>
+                <button class="location"><a href="https://maps.app.goo.gl/venue-location" target="_blank"><span class="loc">View Map</span></a></button>
+            </div>
+        </div>
+        <div class="event">
+            <div class="frame">
+                <img src="assets/sangeeth.jpg" alt="Event 1">
+            </div>
+            <div class="event-details">
+                <h2>Sangeet</h2>
+                <p>DD/MM/YYYY</p>
+                <p>HH:MM AM/PM</p>
+                <p>Venue Name</p>
+                <button class="location"><a href="https://maps.app.goo.gl/venue-location" target="_blank"><span class="loc">View Map</span></a></button>
+            </div>
+        </div>
+        <div class="event">
+            <div class="frame">
+                <img src="assets/wedding.png" alt="Event 1">
+            </div>
+            <div class="event-details">
+                <h2>Wedding</h2>
+                <p>DD/MM/YYYY</p>
+                <p>HH:MM AM/PM</p>
+                <p>Venue Name</p>
+                <button class="location"><a href="https://maps.app.goo.gl/venue-location" target="_blank"><span class="loc">View Map</span></a></button>
+            </div>
+        </div>
+        <div class="event">
+            <div class="frame">
+                <img src="assets/reception.png" alt="Event 1">
+            </div>
+            <div class="event-details">
+                <h2>Reception</h2>
+                <p>DD/MM/YYYY</p>
+                <p>HH:MM AM/PM</p>
+                <p>Venue Name</p>
+                <button class="location"><a href="https://maps.app.goo.gl/venue-location" target="_blank"><span class="loc">View Map</span></a></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- You Are Invited -->
+    <img src="assets/invited.gif" alt="Landscape Image" class="landscape-img">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
